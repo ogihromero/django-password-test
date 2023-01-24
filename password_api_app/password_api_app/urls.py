@@ -70,7 +70,7 @@ def process_rules(password, rules):
     return processedRules(verify=verify, noMatch=noMatch)
 
 
-@api.get("/")
+@api.post("/")
 def add(request, item: Item):
     return process_rules(item.password, item.rules)
 
